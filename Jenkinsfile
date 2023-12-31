@@ -35,5 +35,11 @@ pipeline {
       }
     }
 
+    stage('Dockerhub Push') {
+      steps {
+        sh 'docker push sharvis8/simplegolang:latest'
+      }
+    }
+
   }
 }
