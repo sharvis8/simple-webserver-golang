@@ -13,7 +13,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('new empty file') {
       steps {
         sh 'touch emptyFile'
       }
