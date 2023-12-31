@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        sh 'touch emptyFile'
+      }
+    }
+
   }
 }
