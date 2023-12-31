@@ -21,7 +21,7 @@ pipeline {
 
     stage('DockerBuild') {
       steps {
-        sh 'docker build -t simplegolang .'
+        sh 'docker build -t simplegolang . -t sharvis8/simplegolang:latest'
       }
     }
 
