@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        sh 'docker build -t simplegolang .'
+      }
+    }
+
   }
 }
