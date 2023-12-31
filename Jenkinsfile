@@ -19,9 +19,19 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('DockerBuild') {
       steps {
         sh 'docker build -t simplegolang .'
+      }
+    }
+
+    stage('DockerLogin') {
+      environment {
+        DOCKERHUB_USER = 'sharvis8'
+        DOCKERHUB_PASSWORD = 'Vantage@#456'
+      }
+      steps {
+        sh 'docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD'
       }
     }
 
