@@ -41,5 +41,11 @@ pipeline {
       }
     }
 
+    stage('KubernetesDeployment') {
+      steps {
+        sh 'kubectl create -f Deployment.yaml'
+      }
+    }
+
   }
 }
