@@ -43,7 +43,7 @@ pipeline {
 
     stage('KubernetesDeployment') {
       steps {
-        sh 'kubectl create -f Deployment.yaml', kubeconfigId:"kubernetes"
+        script{ kubernetesDeploy('configs: "Deployment.yaml", kubeconfigId:"kubernetes")}
       }
     }
 
